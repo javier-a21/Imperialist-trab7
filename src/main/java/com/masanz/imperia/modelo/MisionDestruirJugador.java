@@ -1,16 +1,25 @@
 package com.masanz.imperia.modelo;
 
 public class MisionDestruirJugador extends Mision {
-    Jugador enemigo;
+    private Jugador jugadorQueHayQueDestruir;
 
-    public MisionDestruirJugador(Jugador jugador) {
+    public MisionDestruirJugador(Jugador jugadorQueHayQueDestruir) {
         super();
-       this.enemigo = jugador;
+       this.jugadorQueHayQueDestruir = jugadorQueHayQueDestruir;
+    }
+    @Override
+    public boolean setJugador(Jugador jugador) {
+
+        return !jugador.equals(jugadorQueHayQueDestruir);
+        //if(!jugador.equals(jugadorQueHayQueDestruir){
+        //return false;
+        //jugador = jugador
+        //return true
     }
 
     @Override
     public boolean estaCumplida() {
-        if (enemigo.getId().isEmpty()){
+        if (jugadorQueHayQueDestruir.getId().isEmpty()){
             return true;
         }
         return false;
@@ -18,7 +27,7 @@ public class MisionDestruirJugador extends Mision {
 
     @Override
     public String toString() {
-        return " Destruir territorios de " + enemigo;
+        return " Destruir territorios de " + jugadorQueHayQueDestruir;
     }
 
 }
