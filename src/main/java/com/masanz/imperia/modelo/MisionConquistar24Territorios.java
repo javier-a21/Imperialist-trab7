@@ -8,7 +8,6 @@ public class MisionConquistar24Territorios extends Mision {
     }
 
 
-
     @Override
     public String toString() {
         return " Conquistar 24 Territorios";

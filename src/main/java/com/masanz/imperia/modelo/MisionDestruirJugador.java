@@ -18,10 +18,8 @@ public class MisionDestruirJugador extends Mision {
     @Override
     public boolean estaCumplida() {
         List<Territorio> territoriosJugadorDestruir = Mundo.getListaTerritoriosDelJugador(jugadorQueHayQueDestruir.getId());
-        if (territoriosJugadorDestruir.isEmpty()){
-            return true;
-        }
-        return false;
+       return territoriosJugadorDestruir.isEmpty();
+
     }
 
     @Override

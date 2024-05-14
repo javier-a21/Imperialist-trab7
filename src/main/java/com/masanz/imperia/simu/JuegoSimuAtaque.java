@@ -24,7 +24,10 @@ public class JuegoSimuAtaque extends Juego {
                 hayGanador = true;
                 break;
             }
-            if (GestorMisiones.cumpleMision(jugador)) { hayGanador = true; break; }
+            if (GestorMisiones.cumpleMision(jugador)) { hayGanador = true;
+                //System.out.println("Ganador por mision " + jugador);
+
+                break; }
             if (!jugarAtaque(jugador)) { break; }
             //if (!comprobarJugadores()) { break; }
             comprobarJugadores();

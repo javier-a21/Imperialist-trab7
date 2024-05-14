@@ -5,8 +5,10 @@ public abstract class Mision  {
 
     public abstract boolean estaCumplida();
 
-    public  boolean setJugador(Jugador jugador){
+    public boolean setJugador(Jugador jugador){
         this.jugador = jugador;
         return true;
     }
+    @Override
+    public  abstract String toString();
 }
