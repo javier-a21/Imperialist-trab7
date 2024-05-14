@@ -1,12 +1,6 @@
 package com.masanz.imperia.modelo;
 
 public class MisionConquistar18TerritoriosCon2Ejercitos extends Mision {
-    private Jugador jugador;
-    @Override
-    public boolean setJugador(Jugador jugador) {
-        this.jugador = jugador;
-        return true;
-    }
 
     @Override
     public boolean estaCumplida() {
